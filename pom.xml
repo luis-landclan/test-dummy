@@ -7,8 +7,7 @@
   <name>dummy-app</name>
 
 
-  <properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+  <properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding></properties>
 
   <dependencies>
     <dependency>
