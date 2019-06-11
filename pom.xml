@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>test.nexus</groupId>
+  <artifactId>dummy-app</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>dummy-app</name>
+
+
+  <properties><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+
+
+  <repositories>
+    <repository>
+      <id>maven-group</id>
+      <url>https://dev.landclan.com/nexus/repository/maven-group/</url>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>https://dev.landclan.com/nexus/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>https://dev.landclan.com/nexus/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://${env.GITHUB_TOKEN}@github.com/luis-landclan/test-dummy.git</connection>
+    <tag>HEAD</tag>
+  </scm>
+</project>
